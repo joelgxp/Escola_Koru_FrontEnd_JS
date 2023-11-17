@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0 16px; 
+    min-height: 75rem;
+    padding-top: 4.5rem;   
+}
+
+#p-cadastro-paciente, #p-cadastro-medico {
+    padding: 20px 20px 20px 20px;
+}
+
+#tabela {
+   max-width: 50%;
+    
+}
+
+#cpf {
+    width: 200px;
+}
+
+#botoes, #btnconsultar {
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
