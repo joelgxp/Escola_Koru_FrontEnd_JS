@@ -4,7 +4,6 @@ import { Lideres } from './pages/lideres.page.js'
 import { Colaboradores } from './pages/colaboradores.page.js'
 import { Reunioes } from './pages/reunioesl.page.js'
 
-
 const ROUTER = {
     "#404": { component: NotFound, private: false, nome: '404' },
     "#header": { component: Header, private: false, nome: 'header' },
