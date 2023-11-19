@@ -3,7 +3,7 @@ const cardLider = document.createElement('div')
 cardLider.classList.add('c-card-lider')
 
 const eventos = (element, clonedCardContact) => {
-    const [clonedAnchorDelete] = clonedCardContact.querySelectorAll('a')
+    const [clonedAnchorDelete] = clonedCardContact.querySelectorAll('button')
 
     clonedAnchorDelete.addEventListener('click', (e) => {
         e.preventDefault()
@@ -24,17 +24,16 @@ const eventos = (element, clonedCardContact) => {
 
 export const CardLider = (data) => {
     cardLider.innerHTML = `
-    <section id="section">
-        <div id="div-card-contact-nome">
-            ${data.nome}
-            <div id="div-card-contact-links">
-            <a href="/#contacts">Deletar</a>
-            <a href="/?id-contact=${data.id}#contact-details">Visualizar</a>
-            </div>
-        </div>
-    </section>
-    `
     
+        <div class="container">
+            ${data.id}
+            ${data.nome}
+            ${data.departamento}            
+            <button class="btn btn-danger">Deletar</button>            
+        </div>
+    
+    `
+
     /* 
     Quando você retorna cardContact.cloneNode(true), você está criando uma cópia do 
     elemento cardContact com todos os seus filhos e atributos. Isso significa que a 

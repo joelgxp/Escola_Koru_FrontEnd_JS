@@ -27,8 +27,8 @@ export const Lideres = () => {
     lideres.innerHTML = `
 
     <div class="container">
-    <a href="#add-lideres"><button class="btn btn-success">Cadastrar</button></a>
-    <h1>Lideres</h1>
+    <a href="#add-lideres"><button class="btn btn-success">Cadastrar Lider</button></a>
+    <h2>Lideres</h2>
     </div>
     <div id="lista-lideres">
 

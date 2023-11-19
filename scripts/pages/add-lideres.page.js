@@ -13,6 +13,7 @@ const eventos = () => {
     criarLider(dadosFormulario)
       .then(() => {
         window.alert("Lider criado com sucesso")
+        window.location.reload()
       })
       .catch((erro) => {
         console.log(dadosFormulario)

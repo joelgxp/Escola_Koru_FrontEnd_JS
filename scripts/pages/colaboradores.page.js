@@ -1,6 +1,25 @@
 const colaboradores = document.createElement('div')
 colaboradores.setAttribute('id', 'p-colaboradores')
 
+const eventos = () => {
+    buscaColaboradores()
+    .then((data) => {
+            if (data) {
+                const divListaColaboradores = colaboradores.querySelector('#lista-lideres')
+                data.forEach(element => {
+                    const cardLider = CardLider(element)
+                    divListaLideres.appendChild(cardLider)
+                });
+            } else {
+                console.log('Sem dados', data)
+            }
+            
+        })
+        .catch((erro) => {
+            console.log(erro)
+        })
+}
+
 export const Colaboradores = () => {
     colaboradores.innerHTML = `
     <div class="container">
