@@ -1,9 +1,9 @@
 .card {
     background-color: #FFFFFF;
-    width: 280px;
-    height: 400px;
+    width: 400px;
     padding: 30px;
     border-radius: 10px;
+    min-height: auto;
 }
 
 .title {
@@ -28,11 +28,12 @@
 
 .forgot-password {
     display: inline;
-    font-size: 10px;
+    font-size: 12px;
     float: right;
     text-decoration: none;
     color: #000000;
     margin: -8px 0;
+    padding: 10px 0;
 }
 
 .forgot-password:hover {
@@ -41,10 +42,9 @@
 
 .btn {
     width: 100%;
-    height: 30px;
+    height: 40px;
     border: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 10px;
     text-transform: uppercase;
     border-radius: 20px;
     cursor: pointer;
@@ -62,18 +62,4 @@
     background: linear-gradient(to bottom right, #FDD034, #D52D8B);
     color: #FFFFFF;
     border: none;
-}
-
-/* Recuperação de Senha */
-
-.card-password {
-    background-color: #FFFFFF;
-    width: 280px;
-    height: 340px;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-.card-password .title {
-    font-size: 20px;
 }
