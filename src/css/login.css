@@ -51,7 +51,7 @@
 }
 
 .btn-secondary {
-    background: linear-gradient(#FFFFFF, #FFFFFF) padding-box,linear-gradient(to bottom right, #FDD034, #D52D8B) border-box;
+    background: linear-gradient(#FFFFFF, #FFFFFF) padding-box, linear-gradient(to bottom right, #FDD034, #D52D8B) border-box;
     border-radius: 50em;
     border: 1px solid transparent;
     color: #D52D8B;
