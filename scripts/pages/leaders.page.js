@@ -8,7 +8,7 @@ const eventos = () => {
     buscaLider()
     .then((data) => {
             if (data) {
-                const divListaLideres = lideres.querySelector('#lista-lideres')
+                const divListaLideres = lideres.querySelector('table')
                 data.forEach(element => {
                     const cardLider = CardLider(element)
                     divListaLideres.appendChild(cardLider)
@@ -23,14 +23,24 @@ const eventos = () => {
         })
 }
 
-export const Lideres = () => {
+export const Leaders = () => {
     lideres.innerHTML = `
-
+        
     <div class="container">
-    <a href="#add-lideres"><button class="btn btn-success">Cadastrar Lider</button></a>
-    <h2>Lideres</h2>
-    </div>
-    <div id="lista-lideres">
+        <div class="card">
+            <h1 class="title">Líderes</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Departamento</th>
+                    <th>E-mail</th>
+                    <th><a href="#add-leaders"><button class="btn btn-primary">Adicionar</button></a></th>
+                </tr>        
+            </table>
+
+        </div>
+    </div>     
 
     `
 
