@@ -1,9 +1,10 @@
 import { deleteLider } from '../services/lideres.service.js'
-const cardLider = document.createElement('div')
+
+const cardLider = document.createElement('tr')
 cardLider.classList.add('c-card-lider')
 
-const eventos = (element, clonedCardContact) => {
-    const [clonedAnchorDelete] = clonedCardContact.querySelectorAll('button')
+const eventos = (element, clonedCard) => {
+    const [clonedAnchorDelete] = clonedCard.querySelectorAll('button')
 
     clonedAnchorDelete.addEventListener('click', (e) => {
         e.preventDefault()
@@ -12,36 +13,30 @@ const eventos = (element, clonedCardContact) => {
         if (confirm) {
             deleteLider(element.id)
                 .then(() => {
-                    clonedCardContact.remove()
+                    clonedCard.remove()
                     window.location.reload()
                 })
                 .catch((erro) => {
                     console.log(erro)
                 })
         }
-    })
+    }) 
+
 }
 
 export const CardLider = (data) => {
     cardLider.innerHTML = `
-    
-        <div class="container">
-            ${data.id}
-            ${data.nome}
-            ${data.departamento}            
-            <button class="btn btn-danger">Deletar</button>            
-        </div>
-    
+
+                <td>${data.id}</td>
+                <td>${data.nome}</td>
+                <td>${data.departamento}</td>
+                <td>${data.email}</td>
+                <td><button class="btn btn-secondary">Deletar</button></td>
+       
     `
 
-    /* 
-    Quando você retorna cardContact.cloneNode(true), você está criando uma cópia do 
-    elemento cardContact com todos os seus filhos e atributos. Isso significa que a 
-    cópia não terá nenhum evento de clique anexado ao elemento "a" dentro dela.
-    */
-    const clonedCardContact = cardLider.cloneNode(true)
-    // Capturando todos elementos "a" para poder adicionar o evento de click a cópia do cardContact
+    const clonedCard = cardLider.cloneNode(true)
 
-    eventos(data, clonedCardContact)
-    return clonedCardContact
+    eventos(data, clonedCard)
+    return clonedCard
 }
