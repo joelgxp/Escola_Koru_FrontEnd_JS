@@ -11,7 +11,7 @@ const eventos = () => {
 export const Login = () => {
     login.innerHTML = `
     <div class="container">
-        <div class="card">
+        <div class="card-login">
             <h1 class="title">Login</h1>
 
             <label for="user">Usuário</label>
