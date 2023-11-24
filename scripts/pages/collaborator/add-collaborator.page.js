@@ -26,7 +26,7 @@ export const AddCollaborator = () => {
 
     addCollaborator.innerHTML = `
     <div class="container">
-        <div class="card">    
+        <div class="card-collaborator">    
             <form action="">
                 <h1 class="title">Criar ou Editar Colaborador</h1>
                   
