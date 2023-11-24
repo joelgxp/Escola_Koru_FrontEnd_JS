@@ -26,6 +26,14 @@
     padding-left: 2em;
 }
 
+.email {
+    background-image: url("../images/envelope-solid.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 12px;
+    padding-left: 2em;
+}
+
 .forgot-password {
     display: inline;
     font-size: 12px;
