@@ -68,7 +68,7 @@ const eventos = () => {
 export const AddMeetings = () => {    
     addMeetings.innerHTML = `
     <div class="container">
-        <div class="card">    
+        <div class="card-meeting">    
             <form action="">
             <h1 class="title">Criar ou Editar Reunião</h1>
             
