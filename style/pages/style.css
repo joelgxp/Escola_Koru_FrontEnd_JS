@@ -72,3 +72,27 @@ input {
     display: flex;
     justify-content: center;
 }
+
+.card-leader {
+    background-color: #FFFFFF;
+    width: 400px;
+    min-height: auto;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.card-collaborator {
+    background-color: #FFFFFF;
+    width: 400px;
+    min-height: auto;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
