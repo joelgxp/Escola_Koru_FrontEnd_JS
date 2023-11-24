@@ -26,7 +26,7 @@ export const AddLeaders = () => {
 
   adicionarLideres.innerHTML = `
   <div class="container">
-    <div class="card">    
+    <div class="card-leader">    
         <form action="">
         <h1 class="title">Criar ou Editar Líder</h1>
           
