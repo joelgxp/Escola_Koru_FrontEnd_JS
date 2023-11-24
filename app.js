@@ -6,8 +6,9 @@ import { Collaborators } from './scripts/pages/collaborator/collaborators.page.j
 import { AddCollaborator } from './scripts/pages/collaborator/add-collaborator.page.js'
 import { Meetings } from './scripts/pages/meetings/meetings.page.js'
 import { AddMeetings } from './scripts/pages/meetings/add-meetings.page.js'
-import { Signup } from './scripts/pages/signup.page.js'
-import { Login } from './scripts/pages/login.page.js'
+import { Signup } from './scripts/pages/login/signup.page.js'
+import { Login } from './scripts/pages/login/login.page.js'
+import { ForgotPassword } from './scripts/pages/login/forgot-password.page.js'
 
 const ROUTER = {
     "#404": { component: NotFound, private: false, nome: '404' },
@@ -19,7 +20,8 @@ const ROUTER = {
     "#meetings": { component: Meetings, private: false, nome: 'meetings' },
     "#add-meetings": { component: AddMeetings, private: false, nome: 'add-meetings' },
     "#signup": { component: Signup, private: false, nome: 'signup' },
-    "#login": { component: Login, private: false, nome: 'login' }
+    "#login": { component: Login, private: false, nome: 'login' },
+    "#forgot": { component: ForgotPassword, private: false, nome: 'forgot-password' }
 }
 
 function redirectPage() {
