@@ -28,7 +28,7 @@ export const AddLeaders = () => {
   <div class="container">
     <div class="card-leader">    
         <form action="">
-        <h1 class="title">Criar ou Editar Líder</h1>
+        <h1 class="title">Criar Líder</h1>
           
             <label for="nome" class="form-label">Nome</label>
             <input class="nome" type="text" id="nome" name="nome" placeholder="Digite o nome">
