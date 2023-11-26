@@ -2,6 +2,7 @@ import { NotFound } from './scripts/pages/404.page.js'
 import { Header } from './scripts/pages/header.page.js'
 import { Leaders } from './scripts/pages/leader/leaders.page.js'
 import { AddLeaders } from './scripts/pages/leader/add-leaders.page.js'
+import { EditLeaders } from './scripts/pages/leader/edit-leaders.page.js'
 import { Collaborators } from './scripts/pages/collaborator/collaborators.page.js'
 import { AddCollaborator } from './scripts/pages/collaborator/add-collaborator.page.js'
 import { Meetings } from './scripts/pages/meetings/meetings.page.js'
@@ -15,6 +16,7 @@ const ROUTER = {
     "#header": { component: Header, private: false, nome: 'header' },
     "#leaders": { component: Leaders, private: false, nome: 'leaders' },
     "#add-leaders": { component: AddLeaders, private: false, nome: 'add-leaders' },
+    "#edit-leaders": { component: EditLeaders, private: false, nome: 'edit-leaders' },
     "#collaborators": { component: Collaborators, private: false, nome: 'collaborators' },
     "#add-collaborator": { component: AddCollaborator, private: false, nome: 'add-collaborator' },
     "#meetings": { component: Meetings, private: false, nome: 'meetings' },
