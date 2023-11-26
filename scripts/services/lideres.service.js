@@ -53,7 +53,20 @@ export const deleteLider = async (id) => {
     console.error('Ocorreu um erro ao excluir líder:', erro);
     throw erro; // Propagar o erro para quem chamou essa função, se necessário
   }
-};
+}
+
+export const editLeader = async (id) => {
+  const url = urlBase + `lideres/${id}`
+
+  const resposta = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(id)
+  })
+
+}
 
 
 
