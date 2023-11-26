@@ -35,6 +35,7 @@ export const Leaders = () => {
                     <th>Nome</th>
                     <th>Departamento</th>
                     <th>E-mail</th>
+                    <th></th>
                     <th><a href="#add-leaders"><button class="btn btn-primary">Adicionar</button></a></th>
                 </tr>        
             </table>
