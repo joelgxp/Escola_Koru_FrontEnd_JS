@@ -10,8 +10,16 @@
     margin-bottom: 40px;
 }
 
-.user {
+.user, .nome {
     background-image: url("../images/user-solid.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 12px;
+    padding-left: 2em;
+}
+
+.departamento {
+    background-image: url("../images/briefcase-solid.svg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: 12px;
