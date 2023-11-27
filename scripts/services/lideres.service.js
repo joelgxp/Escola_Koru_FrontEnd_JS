@@ -13,9 +13,25 @@ export const buscaLider = async () => {
     return await resposta.json();
   } catch (erro) {
     console.error('Ocorreu um erro na busca de líderes:', erro);
-    throw erro; // Propagar o erro para quem chamou essa função, se necessário
+    throw erro;
   }
-};
+}
+
+export const getAllLeaders = async (id) => {
+  const url = urlBase + `lideres/${id}`
+  try {
+    const resposta = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    return await resposta.json()
+  } catch (erro) {
+    console.error('Ocorreu um erro na busca de lideres:', erro)
+    throw erro
+  }
+}
 
 
 export const criarLider = async (dados) => {
@@ -54,19 +70,24 @@ export const deleteLider = async (id) => {
     throw erro; // Propagar o erro para quem chamou essa função, se necessário
   }
 }
-
-export const editLeader = async (id) => {
-  const url = urlBase + `lideres/${id}`
+export const editarLider = async (id, dadosAtualizados) => {
+  const url = urlBase + `lideres/${id}`;
 
   const resposta = await fetch(url, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(id)
-  })
+    body: JSON.stringify(dadosAtualizados)
+  });
 
-}
+  if (!resposta.ok) {
+    throw new Error(`Erro ao editar líder: ${resposta.statusText}`);
+  }
+
+  return resposta.json();
+};
+
 
 
 
