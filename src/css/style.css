@@ -2,12 +2,17 @@
 
 :root {
     --background-color: linear-gradient(to bottom right, #D52D8B, #FDD034);
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #7D7D7D;
+    --pink: #D52D8B;
+    --yellow: #FDD034;
 }
 
 * {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    color: #000000;
+    color: var(--black);
 }
 
 body {
@@ -15,6 +20,29 @@ body {
     background-image: var(--background-color);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.topnav {
+    background-color: var(--white);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.topnav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.topnav a:hover {
+    opacity: 80%;
+    background-color: var(--yellow);
+    color: var(--pink);
 }
 
 .container {
@@ -31,15 +59,15 @@ body {
     text-transform: uppercase;
 }
 
-.btn-primary {
-    background-image: var(--background-color);
-    color: #FFFFFF;
-    margin: 20px 0;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.btn-primary:hover {
-    opacity: 70%;
+.card {
+    background-color: var(--white);
+    width: 800px;
+    min-height: auto;
+    padding: 30px;
+    border-radius: 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
 }
 
 label {
@@ -50,9 +78,61 @@ label {
 input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #7D7D7D;
+    border-bottom: 1px solid var(--grey);
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     height: 40px;
     margin-bottom: 8px;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-image: var(--background-color);
+    color: var(--white);
+    margin: 20px 0;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    opacity: 70%;
+}
+
+.btn-secondary {
+    background: linear-gradient(var(--white), var(--white)) padding-box, var(--background-color) border-box;
+    border-radius: 50em;
+    border: 1px solid transparent;
+    color: var(--pink);
+    color: var(--background-color);
+}
+
+.btn-secondary:hover {
+    background: var(--grey);
+    opacity: 50%;
+    color: var(--white);
+    border: none;
+}
+
+.btn-danger {
+    background: #FF0000;
+    border: none;
+    color: var(--white);
+}
+
+.btn-danger:hover {
+    opacity: 50%;
+}
+
+.buttons {
+    text-align: center;
 }
