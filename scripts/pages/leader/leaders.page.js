@@ -1,11 +1,11 @@
-import { buscaLider } from "../../services/lideres.service.js";
+import { getLeaders } from "../../services/leaders.service.js";
 import { CardLider } from "../../components/card-lider.component.js";
 
 const lideres = document.createElement('div')
 lideres.setAttribute('id', 'p-lista-lideres')
 
 const eventos = () => {
-    buscaLider()
+    getLeaders()
     .then((data) => {
             if (data) {
                 const divListaLideres = lideres.querySelector('table')
