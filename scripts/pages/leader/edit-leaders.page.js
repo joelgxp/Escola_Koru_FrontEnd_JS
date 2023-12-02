@@ -1,4 +1,4 @@
-import { getAllLeaders, editarLider } from "../../services/lideres.service.js";
+import { getAllLeaders, editarLider } from "../../services/leaders.service.js";
 
 const editLeader = document.createElement('div')
 editLeader.setAttribute('id', 'p-editar-lider')
@@ -45,7 +45,7 @@ const eventos = () => {
                 editarLider(idLider, dadosFormulario)
                     .then(() => {
                         window.alert("Líder editado com sucesso");
-                        window.location.reload();
+                        window.location.href = '/#leaders'
                     })
                     .catch((erro) => {
                         console.log(dadosFormulario);
