@@ -67,7 +67,7 @@ input {
     min-height: auto;
     padding: 30px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -79,7 +79,19 @@ input {
     min-height: auto;
     padding: 30px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.card-signup {
+    background-color: #FFFFFF;
+    width: 400px;
+    min-height: auto;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -91,8 +103,9 @@ input {
     min-height: auto;
     padding: 30px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
     display: flex;
     justify-content: center;
 }
+
