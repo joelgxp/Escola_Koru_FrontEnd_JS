@@ -27,7 +27,7 @@ export const Login = () => {
 
             <button class="btn btn-primary">Entrar</button>
 
-            <button class="btn btn-secondary">Cadastrar-se</button>
+            <a href="#signup"><button class="btn btn-secondary">Cadastrar-se</button></a>
         </div>
     </div>
     `
