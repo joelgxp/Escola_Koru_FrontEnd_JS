@@ -1,4 +1,4 @@
-import { criarLider } from '../../services/lideres.service.js'
+import { createLeader } from '../../services/leaders.service.js'
 
 const adicionarLideres = document.createElement('form')
 adicionarLideres.setAttribute('id', 'p-adicionar-lider')
@@ -10,10 +10,10 @@ const eventos = () => {
     const fd = new FormData(adicionarLideres)
     const dadosFormulario = Object.fromEntries(fd)
 
-    criarLider(dadosFormulario)
+    createLeader(dadosFormulario)
       .then(() => {
         window.alert("Lider criado com sucesso")
-        window.location.reload()
+        window.location.href = '/#leaders'
       })
       .catch((erro) => {
         console.log(dadosFormulario)
