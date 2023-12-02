@@ -1,5 +1,5 @@
 import { postMeetings } from '../../services/meeting.service.js'
-import { buscaLider } from '../../services/lideres.service.js'
+import { getLeaders } from '../../services/leaders.service.js'
 import { getCollaborators } from '../../services/collaborators.service.js'
 
 
@@ -33,7 +33,7 @@ const eventos = () => {
             })
     })
 
-    buscaLider()
+    getLeaders()
     .then((data) => {
         if (data) {
             const selectLider = document.getElementById('id_lider')
