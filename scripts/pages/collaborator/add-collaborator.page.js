@@ -13,7 +13,7 @@ const eventos = () => {
         postCollaborator(dadosFormulario)
             .then(() => {
                 window.alert("Colaborador criado com sucesso")
-                window.location.reload()
+                window.location.href = '/#collaborators'
             })
             .catch((erro) => {
                 console.log(dadosFormulario)
@@ -28,11 +28,13 @@ export const AddCollaborator = () => {
     <div class="container">
         <div class="card-collaborator">    
             <form action="">
-                <h1 class="title">Criar ou Editar Colaborador</h1>
+                <h1 class="title">Criar Colaborador</h1>
                   
                     <label for="nome" class="form-label">Nome</label>
                     <input class="nome" type="text" id="nome" name="nome" placeholder="Digite o nome">
                   
+                    <label for="password" class="form-label">Senha</label>
+                    <input class="password" type="text" id="password" name="password" placeholder="Digite sua senha">
                   
                     <label for="departamento">Departamento</label>
                     <input class="departamento" type="text" id="departamento" name="departamento" placeholder="Digite o departamento">

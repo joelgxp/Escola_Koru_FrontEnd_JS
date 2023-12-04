@@ -9,14 +9,14 @@ export const getMeetings = async () => {
       headers: {
         'Content-Type': 'application/json'
       }
-    });
+    })
     
-    return await resposta.json();
+    return await resposta.json()
   } catch (erro) {
     console.error('Ocorreu um erro na busca de reunioes:', erro)
-    throw erro; // Propagar o erro para quem chamou essa função, se necessário
+    throw erro // Propagar o erro para quem chamou essa função, se necessário
   }
-};
+}
 
 
 export const postMeetings = async (dados) => {
@@ -49,9 +49,9 @@ export const deleteMeetings = async (id) => {
       throw new Error(`Erro ao excluir colaborador: ${resposta.statusText}`)
     }
 
-    return resposta; // Retorna a resposta diretamente, sem analisar o JSON
+    return resposta // Retorna a resposta diretamente, sem analisar o JSON
   } catch (erro) {
     console.error('Ocorreu um erro ao excluir colaborador:', erro)
-    throw erro; // Propagar o erro para quem chamou essa função, se necessário
+    throw erro // Propagar o erro para quem chamou essa função, se necessário
   }
 }

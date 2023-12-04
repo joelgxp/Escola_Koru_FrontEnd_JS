@@ -1,4 +1,5 @@
-import { deleteLeader } from '../services/leaders.service.js'
+
+import { deleteLeader, editarLider } from '../services/leaders.service.js'
 
 const cardLider = document.createElement('tr')
 cardLider.classList.add('c-card-lider')
@@ -11,9 +12,10 @@ const eventos = (element, clonedCard) => {
         const confirm = window.confirm(`Deseja deletar o contato ${element.nome}?`)
 
         if (confirm) {
-            deleteLeader(element.id)
+            const dados = {ativo: 0}
+            deleteLeader(element.id, dados)
                 .then(() => {
-                    clonedCard.remove()
+                    window.alert("Líder deletado com sucesso.")
                     window.location.reload()
                 })
                 .catch((erro) => {

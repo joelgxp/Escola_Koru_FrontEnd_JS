@@ -12,18 +12,18 @@ import { Login } from './scripts/pages/login/login.page.js'
 import { ForgotPassword } from './scripts/pages/login/forgot-password.page.js'
 
 const ROUTER = {
-    "#404": { component: NotFound, private: false, nome: '404' },
-    "#header": { component: Header, private: false, nome: 'header' },
-    "#leaders": { component: Leaders, private: false, nome: 'leaders' },
-    "#add-leaders": { component: AddLeaders, private: false, nome: 'add-leaders' },
-    "#edit-leaders": { component: EditLeaders, private: false, nome: 'edit-leaders' },
-    "#collaborators": { component: Collaborators, private: false, nome: 'collaborators' },
-    "#add-collaborator": { component: AddCollaborator, private: false, nome: 'add-collaborator' },
-    "#meetings": { component: Meetings, private: false, nome: 'meetings' },
-    "#add-meetings": { component: AddMeetings, private: false, nome: 'add-meetings' },
-    "#signup": { component: Signup, private: false, nome: 'signup' },
-    "#login": { component: Login, private: false, nome: 'login' },
-    "#forgot": { component: ForgotPassword, private: false, nome: 'forgot-password' }
+    "#404": { component: NotFound, private: false },
+    "#header": { component: Header, private: false },
+    "#leaders": { component: Leaders, private: false },
+    "#add-leaders": { component: AddLeaders, private: false },
+    "#edit-leaders": { component: EditLeaders, private: false },
+    "#collaborators": { component: Collaborators, private: false },
+    "#add-collaborator": { component: AddCollaborator, private: false },
+    "#meetings": { component: Meetings, private: false },
+    "#add-meetings": { component: AddMeetings, private: false },
+    "#signup": { component: Signup, private: false },
+    "#login": { component: Login, private: false },
+    "#forgot": { component: ForgotPassword, private: false }
 }
 
 function redirectPage() {
@@ -36,6 +36,9 @@ function redirectPage() {
 }
 
 window.addEventListener('load', () => {
-redirectPage()
-window.addEventListener('hashchange', redirectPage)
+    if (!window.location.hash) {
+        window.location.hash = "#login"
+    }
+    redirectPage()
+    window.addEventListener('hashchange', redirectPage)
 })

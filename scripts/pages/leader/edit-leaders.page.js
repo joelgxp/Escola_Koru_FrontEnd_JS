@@ -1,4 +1,4 @@
-import { getAllLeaders, editarLider } from "../../services/leaders.service.js";
+import { getAllLeaders, editarLider } from "../../services/leaders.service.js"
 
 const editLeader = document.createElement('div')
 editLeader.setAttribute('id', 'p-editar-lider')
@@ -10,7 +10,6 @@ const eventos = () => {
 
     getAllLeaders(idLider)
         .then((data) => {
-            console.log(data);
 
             editLeader.innerHTML = `
                 <div class="container">
@@ -33,33 +32,32 @@ const eventos = () => {
                         </form>
                     </div>
                 </div>
-            `;
+            `
 
-            const editForm = editLeader.querySelector('#editForm');
-            const editarBtn = editLeader.querySelector('#editarBtn');
+            const editForm = editLeader.querySelector('#editForm')
+            const editarBtn = editLeader.querySelector('#editarBtn')
 
             editarBtn.addEventListener('click', () => {
-                const formData = new FormData(editForm);
-                const dadosFormulario = Object.fromEntries(formData);
+                const formData = new FormData(editForm)
+                const dadosFormulario = Object.fromEntries(formData)
 
                 editarLider(idLider, dadosFormulario)
                     .then(() => {
-                        window.alert("Líder editado com sucesso");
+                        window.alert("Líder editado com sucesso")
                         window.location.href = '/#leaders'
                     })
                     .catch((erro) => {
-                        console.log(dadosFormulario);
-                        console.log(erro);
-                    });
-            });
+                        console.log(erro)
+                    })
+            })
         })
         .catch((erro) => {
-            console.log(erro);
-        });
+            console.log(erro)
+        })
 }
 
 export const EditLeaders = () => {
-    eventos();
-    return editLeader;
+    eventos()
+    return editLeader
 }
 

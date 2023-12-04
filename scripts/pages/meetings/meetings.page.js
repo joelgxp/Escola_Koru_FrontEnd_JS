@@ -12,7 +12,7 @@ const eventos = () => {
                 data.forEach(element => {
                     const cardReuniao = CardMeetings(element)
                     divListaReunioes.appendChild(cardReuniao)
-                });
+                })
             } else {
                 console.log('Sem dados', data)
             }
@@ -45,5 +45,5 @@ export const Meetings = () => {
 
     `
     eventos()
-    return meetings;
+    return meetings
 }

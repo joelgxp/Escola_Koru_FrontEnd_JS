@@ -1,13 +1,13 @@
 import { createLeader } from '../../services/leaders.service.js'
 
-const adicionarLideres = document.createElement('form')
-adicionarLideres.setAttribute('id', 'p-adicionar-lider')
+const addLeaders = document.createElement('form')
+addLeaders.setAttribute('id', 'p-adicionar-lider')
 
 const eventos = () => {
-  adicionarLideres.addEventListener('submit', (e) => {
+  addLeaders.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const fd = new FormData(adicionarLideres)
+    const fd = new FormData(addLeaders)
     const dadosFormulario = Object.fromEntries(fd)
 
     createLeader(dadosFormulario)
@@ -24,7 +24,7 @@ const eventos = () => {
 
 export const AddLeaders = () => {
 
-  adicionarLideres.innerHTML = `
+  addLeaders.innerHTML = `
   <div class="container">
     <div class="card-leader">    
         <form action="">
@@ -33,6 +33,8 @@ export const AddLeaders = () => {
             <label for="nome" class="form-label">Nome</label>
             <input class="nome" type="text" id="nome" name="nome" placeholder="Digite o nome">
           
+            <label for="password" class="form-label">Senha</label>
+            <input class="password" type="text" id="password" name="password" placeholder="Digite sua senha">
           
             <label for="departamento">Departamento</label>
             <input class="departamento" type="text" id="departamento" name="departamento" placeholder="Digite o departamento">
@@ -48,5 +50,5 @@ export const AddLeaders = () => {
   </div>
 `
   eventos()
-  return adicionarLideres
+  return addLeaders
 }

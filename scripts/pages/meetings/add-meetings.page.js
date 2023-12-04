@@ -42,7 +42,7 @@ const eventos = () => {
                 option.setAttribute('value', element.id)
                 option.textContent = element.nome
                 selectLider.appendChild(option)
-            });
+            })
         } else {
             console.log('Sem dados', data)
         }
@@ -57,7 +57,7 @@ const eventos = () => {
                 option.setAttribute('value', element.id)
                 option.textContent = element.nome
                 selectColaborador.appendChild(option)
-            });
+            })
         } else {
             console.log('Sem dados', data)
         }
